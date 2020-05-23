@@ -11,6 +11,7 @@ import com.example.myfunlist.MainActivity
 import com.example.myfunlist.R
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_sign_up.*
@@ -18,6 +19,7 @@ import kotlinx.android.synthetic.main.activity_sign_up.*
 class SignUpActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private lateinit var rootReference: DatabaseReference
+    private lateinit var currentUserID: String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
@@ -35,7 +37,7 @@ class SignUpActivity : AppCompatActivity() {
                 auth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(this,
                     OnCompleteListener { task ->
                         if(task.isSuccessful){
-                            val currentUserID=auth.currentUser!!.uid
+                            currentUserID = auth.currentUser!!.uid
                             rootReference.child("Users").child(currentUserID).setValue("")
                             Toast.makeText(this, "Successfully Registered", Toast.LENGTH_LONG).show()
                             val intent = Intent(this, MainActivity::class.java)

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Game"
+            android:textColor="#000"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/inputTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/heading"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="45dp"
+            android:background="@null"
+            android:hint="Title"
+            android:textColor="#000" />
+
+        <EditText
+            android:id="@+id/inputType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inputTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:background="@null"
+            android:hint="Type"
+            android:textColor="#000" />
+
+        <EditText
+            android:id="@+id/inputPublisher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inputType"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:background="@null"
+            android:hint="Publisher"
+            android:textColor="#000" />
+
+        <EditText
+            android:id="@+id/inputYear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inputPublisher"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:background="@null"
+            android:hint="Release year "
+            android:inputType="number"
+            android:textColor="#000" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/action_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="20dp"
+            android:text="OK"
+            android:textColor="#000"
+            android:textSize="18sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/action_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="20dp"
+            android:text="CANCEL"
+            android:textColor="#000"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

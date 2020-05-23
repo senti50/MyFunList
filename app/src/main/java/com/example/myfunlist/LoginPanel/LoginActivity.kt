@@ -11,13 +11,14 @@ import com.example.myfunlist.MainActivity
 import com.example.myfunlist.R
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var auth:FirebaseAuth
-
+    private lateinit var currentUserID: String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -35,9 +36,10 @@ class LoginActivity : AppCompatActivity() {
             OnCompleteListener { task ->
                 if (task.isSuccessful){
 
-
+                    currentUserID = auth.currentUser!!.uid
                     Toast.makeText(this,"Successfully Logged In",Toast.LENGTH_LONG).show()
                     val intent = Intent(this, MainActivity::class.java)
+                    intent.putExtra("userID", currentUserID)
                     startActivity(intent)
                     finish()
                 }
@@ -56,6 +58,7 @@ class LoginActivity : AppCompatActivity() {
         reset_password.setOnClickListener {
             val intent=Intent(this,
                 ForgotPasswordActivity::class.java)
+
             startActivity(intent)
         }
 
