@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">MyFunList</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="back">Back to Login Page</string>
+    <string name="resed_password">Reset password</string>
+    <string name="or_text">OR</string>
+    <string name="forgot_password_text">Just enter the email addres you\'ve used to register and we\'ll send you a reset link!</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="signup_text">Sign up</string>
+    <string name="login_button">Login</string>
+    <string name="sign_in_toptext">Create new account</string>
+    <string name="navigation_movies">Movies</string>
+    <string name="navigation_games">Games</string>
+    <string name="navigation_books">Books</string>
+    <string name="_navigation_add">Add</string>
+    <string name="search">Search</string>
+    <string name="menu_logout">Logout</string>
+    <string name="menu_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

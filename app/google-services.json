@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "265139025404",
+    "firebase_url": "https://myfunlist-249e8.firebaseio.com",
+    "project_id": "myfunlist-249e8",
+    "storage_bucket": "myfunlist-249e8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:265139025404:android:f57007565881049fa32e79",
+        "android_client_info": {
+          "package_name": "com.example.myfunlist"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "265139025404-0b9ol6ikgkn81gfck4m7ngcbcfp6hnfv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDR4Squ10ssIfgYEDc137uLvJ0M-ls8DOE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "265139025404-0b9ol6ikgkn81gfck4m7ngcbcfp6hnfv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
