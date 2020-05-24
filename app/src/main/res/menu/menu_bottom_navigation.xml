@@ -4,7 +4,10 @@
     android:title="@string/navigation_movies"
     android:icon="@drawable/ic_movie_black_24dp"
     ></item>
-
+    <item
+        android:id="@+id/favourites"
+        android:title="@string/favourites"
+        android:icon="@drawable/ic_favorite_black_24dp"></item>
     <item android:id="@+id/navigationBooks"
         android:title="@string/navigation_books"
         android:icon="@drawable/ic_library_books_black_24dp"

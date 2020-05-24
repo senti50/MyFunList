@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import com.example.myfunlist.Fragments.BooksFragment
+import com.example.myfunlist.Fragments.FavouritesFragment
 import com.example.myfunlist.Fragments.GamesFragment
 import com.example.myfunlist.Fragments.MoviesFragment
 import com.example.myfunlist.LoginPanel.LoginActivity
@@ -38,8 +39,11 @@ class MainActivity : AppCompatActivity() {
             menu: MenuItem ->
             when{
                 menu.itemId==R.id.navigationMovie ->{
-                    val fragment = MoviesFragment.newInstance(currentUserID)
-                    loadFragment(fragment)
+                    loadFragment(MoviesFragment())
+                    return@setOnNavigationItemSelectedListener true
+                }
+                menu.itemId == R.id.favourites -> {
+                    loadFragment(FavouritesFragment())
                     return@setOnNavigationItemSelectedListener true
                 }
                 menu.itemId==R.id.navigationBooks ->{
