@@ -1,11 +1,14 @@
 package com.example.myfunlist
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import android.view.MotionEvent
+import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
@@ -51,8 +54,7 @@ class MainActivity : AppCompatActivity() {
                     return@setOnNavigationItemSelectedListener true
                 }
                 menu.itemId==R.id.navigationGames ->{
-                    val fragment = GamesFragment.newInstance(currentUserID)
-                    loadFragment(fragment)
+                    loadFragment(GamesFragment())
                     return@setOnNavigationItemSelectedListener true
                 }
                 else ->{
@@ -92,7 +94,13 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-
+    override fun dispatchTouchEvent(ev: MotionEvent?): Boolean {
+        if (currentFocus != null) {
+            val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            imm.hideSoftInputFromWindow(currentFocus!!.windowToken, 0)
+        }
+        return super.dispatchTouchEvent(ev)
+    }
 
     private  fun loadFragment(fragment: Fragment){
         supportFragmentManager.beginTransaction().also { fragmentTransaction ->
