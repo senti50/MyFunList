@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimary">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_margin="18sp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:padding="10dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Book"
+            android:textColor="#000"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/inputTitle_book"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/heading"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="45dp"
+            android:background="@null"
+            android:hint="Title"
+            android:textColor="#000" />
+
+        <EditText
+            android:id="@+id/inputAuthor_book"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inputTitle_book"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:background="@null"
+            android:hint="Author"
+            android:textColor="#000" />
+
+        <EditText
+            android:id="@+id/inputPublisher_book"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inputAuthor_book"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:background="@null"
+            android:hint="Publisher"
+            android:textColor="#000" />
+
+        <EditText
+            android:id="@+id/inputLanguage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inputPublisher_book"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:background="@null"
+            android:hint="Language "
+            android:inputType="text"
+            android:textColor="#000" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/action_ok_book"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="20dp"
+            android:background="@color/colorAccent"
+            android:text="OK"
+            android:textColor="#000"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/action_cancel_book"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="20dp"
+            android:background="@color/colorAccent"
+            android:text="CANCEL"
+            android:textColor="#000"
+            android:textSize="18sp"
+            app:rippleColor="@color/colorAccent" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
